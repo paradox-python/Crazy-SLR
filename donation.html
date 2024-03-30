@@ -14,17 +14,25 @@
         .container {
             max-width: 600px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 40px;
             background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transform: translateZ(0);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
         }
         h1 {
             text-align: center;
             color: #007bff;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
         p {
             text-align: center;
+            margin-bottom: 40px;
         }
         form {
             display: flex;
@@ -33,20 +41,30 @@
         }
         label {
             margin-bottom: 10px;
+            font-weight: bold;
         }
         input[type="text"],
+        input[type="email"],
         input[type="number"],
         select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
         }
         input[type="submit"] {
             width: 50%;
-            padding: 10px;
+            padding: 12px;
             background-color: #007bff;
             color: #fff;
             border: none;
@@ -57,13 +75,20 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Support Our Cause</h1>
         <p>Your donation can make a difference!</p>
-        <form action="#" method="post">
+        <form action="https://example.com/submit-form" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -79,6 +104,7 @@
                 <option value="EUR">EUR</option>
                 <option value="GBP">GBP</option>
                 <option value="JPY">JPY</option>
+                <option value="INR">INR</option> <!-- Indian Rupee (INR) -->
             </select>
             
             <input type="submit" value="Donate">
