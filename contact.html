@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label, input, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Contact us by filling the form.......</h1>
+    <form action="https://formspree.io/f/mvoewbpl" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="Full Name" name="Name:-" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="E-mail Id:-" required>
+        
+        <label for="phone">Phone No.</label>
+        <input type="phone" id="phone" name="Phone Number:-" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="Message"  required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h1>Note:-</h1>
+    <p>1. Send message only for business purpose.</p>
+</body>
+</html>
