@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.header{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(im5.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    
+}
+nav{
+    display: flex;
+    padding: 20px 100px;
+    
+}
+nav image{
+    width: 150px;    
+}
+nav ul{
+    text-align: right;
+    display: inline;
+    list-style: none;
+    flex: 1;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: rgb(13, 188, 185);
+    padding: 10px 20px; /* Add padding to increase clickable area */
+    border-radius: 5px; /* Add rounded corners for a modern look */
+    transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+nav ul li:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+}
+
+
+
+
+.main-text{
+    margin: 15% auto;
+    text-align: center;
+}
+.main-text ch{
+    font-size: 50px;
+}
+
+.main-text .button{
+    text-decoration: none;
+    display: block;
+    width: 140px;
+    height: 35px;
+    margin: 25px auto;
+    color: #fff;
+    line-height: 35px;
+    border: 1px solid #fff;
+}
+.button:hover{
+    background: #fff;
+    color: #000;
+    transition: 0.5s;
+}
