@@ -10,18 +10,39 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #007bff;
+            text-transform: uppercase;
+            font-size: 36px;
+            text-shadow: 2px 2px #ccc;
         }
         form {
-            width: 50%;
+            width: 80%;
+            max-width: 600px;
             margin: 50px auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         label, input, textarea {
             display: block;
             margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"],
+        textarea {
+            width: calc(100% - 22px); /* Adjusting width to account for border */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
         input[type="submit"] {
             padding: 10px 20px;
@@ -30,14 +51,20 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
-    <h1 >Contact us by filling the form.......</h1>
+    <h1>Contact us by filling the form.......</h1>
     <form action="https://formspree.io/f/mvoewbpl" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="Full Name" name="Name:-" required>
@@ -53,7 +80,10 @@
 
         <input type="submit" value="Submit">
     </form>
-    <h1>Note:-</h1>
-    <p>1. Send message only for business purpose.</p>
+    <div class="note">
+        <h2>Note:</h2>
+        <p>1. Send messages only for business purposes.</p>
+    </div>
+  
 </body>
 </html>
