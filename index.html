@@ -14,13 +14,13 @@
         .header {
             background-image: url('ban1.jpg');
             background-size: cover;
-            color: #fff; /* Changed text color to white for better contrast */
+            color: #fff;
             padding: 20px;
             font-size: 24px;
             text-align: center;
             border-bottom: 2px solid #ff0000;
             perspective: 1000px;
-            position: relative; /* Added relative positioning for absolute elements */
+            position: relative;
         }
 
         nav {
@@ -48,18 +48,17 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s;
-            border: 2px solid transparent; /* Added transparent border */
-            padding: 5px 10px; /* Added padding for better appearance */
-            border-radius: 5px; /* Added border radius for rounded corners */
+            border: 2px solid transparent;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         nav ul li a:hover {
             color: #fff;
-            background-color: rgba(255, 255, 255, 0.1); /* Added background color on hover */
-            border-color: #fff; /* Change border color on hover */
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
         }
 
-        /* Set default border style for the links */
         nav ul li a {
             border: 2px solid #f0eeee;
         }
@@ -136,7 +135,6 @@
             }
         }
 
-        /* Reduce background image intensity */
         body {
             filter: brightness(89%);
         }
@@ -148,9 +146,8 @@
             color: #fff;
         }
 
-        /* Additional styles for the header */
         .logo {
-            width: 200px; /* Adjust according to your logo size */
+            width: 200px;
             height: auto;
         }
 
@@ -158,10 +155,9 @@
             font-size: 36px;
             font-weight: bold;
             margin-top: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for better readability */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        /* Add animation to the header */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -172,11 +168,25 @@
         }
 
         .header-content {
-            animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
+            animation: fadeIn 1s ease-in-out;
         }
         p{
           text-align: center;
-          margin-top: 300px;
+          margin-top: 30px;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            margin-left: 200px;
+            padding-bottom: 56.25%;
+            margin-top: 100px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%; /* Changed width to 80% */
+            height: 80%; /* Changed height to 80% */
         }
     </style>
 </head>
@@ -200,8 +210,12 @@
         </div>
     </div>
     
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XBQNBlBctjc?si=Ps73PaYxwagB-Lvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+    </div>
     
-        <p><b>Upcoming Event: [Surprise for everyone....]</b></p>
+    <p><b>Upcoming Event: [Surprise for everyone....]</b></p>
     
 </body>
 </html>
