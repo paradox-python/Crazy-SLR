@@ -7,24 +7,20 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: rgb(246, 209, 245);
+            background-color: rgb(255, 234, 254);
             background-size: cover;
-        }
-        p{
-            font-size: 50px;
-            margin-top: 300px;
-            text-align: center;
         }
 
         .header {
             background-image: url('ban1.jpg');
             background-size: cover;
-            color: #c6c125;
+            color: #fff; /* Changed text color to white for better contrast */
             padding: 20px;
             font-size: 24px;
             text-align: center;
             border-bottom: 2px solid #ff0000;
             perspective: 1000px;
+            position: relative; /* Added relative positioning for absolute elements */
         }
 
         nav {
@@ -52,10 +48,20 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s;
+            border: 2px solid transparent; /* Added transparent border */
+            padding: 5px 10px; /* Added padding for better appearance */
+            border-radius: 5px; /* Added border radius for rounded corners */
         }
 
         nav ul li a:hover {
             color: #fff;
+            background-color: rgba(255, 255, 255, 0.1); /* Added background color on hover */
+            border-color: #fff; /* Change border color on hover */
+        }
+
+        /* Set default border style for the links */
+        nav ul li a {
+            border: 2px solid #f0eeee;
         }
 
         .main-text {
@@ -63,7 +69,7 @@
             margin-top: 50px;
         }
 
-        .main-text ch {
+        .main-text span {
             font-size: 24px;
             display: block;
             margin-bottom: 20px;
@@ -120,7 +126,7 @@
                 margin-top: 20px;
             }
 
-            .main-text ch {
+            .main-text span {
                 font-size: 20px;
             }
 
@@ -132,7 +138,7 @@
 
         /* Reduce background image intensity */
         body {
-            filter: brightness(80%);
+            filter: brightness(89%);
         }
         
         .upcoming-event {
@@ -141,23 +147,56 @@
             margin-top: 30px;
             color: #fff;
         }
+
+        /* Additional styles for the header */
+        .logo {
+            width: 200px; /* Adjust according to your logo size */
+            height: auto;
+        }
+
+        .brand-name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for better readability */
+        }
+
+        /* Add animation to the header */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 4;
+            }
+        }
+
+        .header-content {
+            animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
+        }
+        p{
+          text-align: center;
+          margin-top: 300px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <nav>
-            <h1>Crazy SLR</h1>  
-            
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About Channel</a></li>
-            </ul>
-        </nav>
-        <div class="main-text">
-            <ch><b>SUBSCRIBE YT Channel - Crazy SLR</b></ch>
-            <a href="https://www.youtube.com/@CrazySLR" class="button">YouTube Channel</a>
-            <a href="donation.html" class="button">Subscription</a>
+        <div class="header-content">
+            <nav>
+                <img class="logo" src="cl.jpg" alt="Logo">  
+                
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Channel</a></li>
+                </ul>
+            </nav>
+            <div class="main-text">
+                <span><b>SUBSCRIBE YT Channel - Crazy SLR</b></span>
+                <a href="https://www.youtube.com/@CrazySLR" class="button">YouTube Channel</a>
+                <a href="donation.html" class="button">Subscription</a>
+            </div>
         </div>
     </div>
     
