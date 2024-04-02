@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crazy SLR</title>
     <style>
         body {
@@ -9,7 +10,8 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: rgb(255, 234, 254);
-            background-size: cover;
+            perspective: 1000px;
+            filter: brightness(89%);
         }
 
         .header {
@@ -20,8 +22,8 @@
             font-size: 24px;
             text-align: center;
             border-bottom: 2px solid #ff0000;
-            perspective: 1000px;
             position: relative;
+            animation: slideInDown 1s ease-in-out;
         }
 
         nav {
@@ -67,6 +69,7 @@
         .main-text {
             text-align: center;
             margin-top: 50px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .main-text span {
@@ -101,11 +104,29 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: transform 0.3s;
-            perspective: 1000px;
         }
 
         .button:hover {
             transform: translateY(-3px) rotateX(20deg) rotateY(10deg);
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-5px);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+            75% {
+                transform: translateX(-5px);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         @media only screen and (max-width: 600px) {
@@ -137,15 +158,11 @@
             }
         }
 
-        body {
-            filter: brightness(89%);
-        }
-
         .upcoming-event {
             text-align: center;
             font-size: 20px;
             margin-top: 30px;
-            color: #fff;
+            color: #201f1f;
         }
 
         .logo {
@@ -163,15 +180,13 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: translateY(-20px);
             }
 
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
-        }
-
-        .header-content {
-            animation: fadeIn 1s ease-in-out;
         }
 
         p {
@@ -195,7 +210,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="header">
         <div class="header-content">
@@ -216,16 +230,13 @@
         </div>
     </div>
 
-
     <div class="challenge">
         <img src="c.jpg">
     </div>
-    <p><b>Upcoming Event: [Surprise for everyone....]</b></p>
+    <p><b class="upcoming-event">Upcoming Event: [Surprise for everyone....]</b></p>
 
     <div class="button-container">
         <a href="register.html" class="button">Register Now For challenge</a>
     </div>
-
 </body>
-
 </html>
