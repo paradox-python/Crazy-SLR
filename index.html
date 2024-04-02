@@ -241,7 +241,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 9999;
-            display: none;
+            display:none;
             margin-top: 240px;
             /* Initially hide the loading spinner */
         }
@@ -302,16 +302,23 @@
     </script>
         <!-- Your JavaScript -->
         <script>
-            function showLoading(x) {
-                // Show loading spinner
-                document.getElementById('loadingSpinner').style.display = 'block';
-    
-                // Simulate a delay to show loading animation
-                setTimeout(function() {
-                    // Navigate to the next page
-                    window.location.href = x;
-                }, 1000); // Change 2000 to the desired duration of your loading animation in milliseconds
-            }
+            
+    function showLoading(x) {
+        // Show loading spinner
+        document.getElementById('loadingSpinner').style.display = 'block';
+
+        // Simulate a delay to show loading animation
+        setTimeout(function() {
+            // Navigate to the next page
+            window.location.href = x;
+        }, 1000); // Change 2000 to the desired duration of your loading animation in milliseconds
+    }
+
+    // Add event listener for page load
+    window.addEventListener('load', function() {
+        // Hide the loading spinner when the page is loaded
+        document.getElementById('loadingSpinner').style.display = 'none';
+    });
         </script>
 </body>
 
