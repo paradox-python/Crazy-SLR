@@ -183,15 +183,12 @@
 
         .logo {
             width: 200px;
-            /* Adjust as needed */
             height: auto;
             transition: transform 0.4s;
-            /* Add transition for smooth animation */
         }
 
         .logo:hover {
             transform: scale(1.5);
-            /* Zoom in effect on hover */
         }
 
         .brand-name {
@@ -246,8 +243,6 @@
             transform: translate(-50%, -50%);
             z-index: 9999;
             display: none;
-            margin-top: 240px;
-            /* Initially hide the loading spinner */
         }
 
         @keyframes spin {
@@ -273,17 +268,15 @@
                     <div class="dot"></div>
                 </div>
                 <ul>
-                    <li><a class="button" onclick="showLoading('index.html')">Home</a></li>
-                    <li><a class="button" onclick="showLoading('contact.html')">Contact</a></li>
-                    <li><a class="button" onclick="showLoading('about.html')">About Channel</a></li>
-                    <div class="loading-spinner" id="loadingSpinner"></div>
+                    <li><a class="button" href="index.html">Home</a></li>
+                    <li><a class="button" href="contact.html">Contact</a></li>
+                    <li><a class="button" href="about.html">About Channel</a></li>
                 </ul>
             </nav>
             <div class="main-text">
                 <span><b>SUBSCRIBE YT Channel - Crazy SLR</b></span>
-                <a class="button" onclick="showLoading('https://www.youtube.com/@CrazySLR')">YouTube Channel</a>
-                <a class="button" onclick="showLoading('rank.html')">Winners</a>
-                <div class="loading-spinner" id="loadingSpinner"></div>
+                <a class="button" href="https://www.youtube.com/@CrazySLR">YouTube Channel</a>
+                <a class="button" href="rank.html">Winners</a>
             </div>
         </div>
     </div>
@@ -294,8 +287,7 @@
     <p><b class="upcoming-event">Upcoming Event: [Surprise for everyone....]</b></p>
 
     <div class="button-container">
-        <a class="button" onclick="showLoading('register.html')">Register Now For challenge</a>
-        <div class="loading-spinner" id="loadingSpinner"></div>
+        <a class="button" href="register.html">Register Now For challenge</a>
     </div>
 
     <script>
@@ -303,28 +295,6 @@
             var nav = document.querySelector('nav ul');
             nav.classList.toggle('active');
         }
-    </script>
-    <!-- Your JavaScript -->
-    <script>
-        function showLoading(x) {
-            // Hide loading spinner if it's visible
-            document.getElementById('loadingSpinner').style.display = 'none';
-
-            // Show loading spinner
-            document.getElementById('loadingSpinner').style.display = 'block';
-
-            // Simulate a delay to show loading animation
-            setTimeout(function () {
-                // Navigate to the next page
-                window.location.href = x;
-            }, 1000); // Change 2000 to the desired duration of your loading animation in milliseconds
-        }
-
-        // Add event listener for page load
-        window.addEventListener('load', function () {
-            // Hide the loading spinner when the page is loaded
-            document.getElementById('loadingSpinner').style.display = 'none';
-        });
     </script>
 </body>
 
