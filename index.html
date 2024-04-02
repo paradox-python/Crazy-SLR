@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,29 +121,10 @@
             letter-spacing: 1px;
             transition: transform 0.3s;
         }
-
         .button:hover {
-            transform: translateY(-3px) rotateX(20deg) rotateY(10deg);
-            animation: shake 0.5s;
+            transform: scale(1.5) ;
         }
-
-        @keyframes shake {
-            0% {
-                transform: translateX(0);
-            }
-            25% {
-                transform: translateX(-5px);
-            }
-            50% {
-                transform: translateX(5px);
-            }
-            75% {
-                transform: translateX(-5px);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
+        
 
         @media only screen and (max-width: 600px) {
             .header {
@@ -198,10 +180,15 @@
         }
 
         .logo {
-            width: 200px;
+            width: 200px; /* Adjust as needed */
             height: auto;
+            transition: transform 0.4s; /* Add transition for smooth animation */
         }
-
+        
+        .logo:hover {
+            transform: scale(2); /* Zoom in effect on hover */
+        }
+        
         .brand-name {
             font-size: 36px;
             font-weight: bold;
@@ -240,8 +227,36 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        .loading-spinner {
+            border: 4px solid rgba(221, 247, 255, 0.798);
+            border-radius: 50%;
+            border-top: 4px solid #020ccf;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            display: none;
+            margin-top: 240px;
+            /* Initially hide the loading spinner */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="header">
         <div class="header-content">
@@ -253,15 +268,17 @@
                     <div class="dot"></div>
                 </div>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About Channel</a></li>
+                    <li><a class="button" onclick="showLoading('index.html')">Home</a></li>
+                    <li><a class="button" onclick="showLoading('contact.html')">Contact</a></li>
+                    <li><a class="button" onclick="showLoading('about.html')">About Channel</a></li>
+                    <div class="loading-spinner" id="loadingSpinner"></div>
                 </ul>
             </nav>
             <div class="main-text">
                 <span><b>SUBSCRIBE YT Channel - Crazy SLR</b></span>
-                <a href="https://www.youtube.com/@CrazySLR" class="button">YouTube Channel</a>
-                <a href="donation.html" class="button">Support Here</a>
+                <a class="button" onclick="showLoading('https://www.youtube.com/@CrazySLR')" >YouTube Channel</a>
+                <a class="button" onclick="showLoading('donation.html')">Support Here</a>
+                <div class="loading-spinner" id="loadingSpinner"></div>
             </div>
         </div>
     </div>
@@ -272,7 +289,8 @@
     <p><b class="upcoming-event">Upcoming Event: [Surprise for everyone....]</b></p>
 
     <div class="button-container">
-        <a href="register.html" class="button">Register Now For challenge</a>
+        <a class="button" onclick="showLoading('register.html')">Register Now For challenge</a>
+        <div class="loading-spinner" id="loadingSpinner"></div>
     </div>
 
     <script>
@@ -281,5 +299,19 @@
             nav.classList.toggle('active');
         }
     </script>
+        <!-- Your JavaScript -->
+        <script>
+            function showLoading(x) {
+                // Show loading spinner
+                document.getElementById('loadingSpinner').style.display = 'block';
+    
+                // Simulate a delay to show loading animation
+                setTimeout(function() {
+                    // Navigate to the next page
+                    window.location.href = x;
+                }, 1000); // Change 2000 to the desired duration of your loading animation in milliseconds
+            }
+        </script>
 </body>
+
 </html>
