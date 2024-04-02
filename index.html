@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crazy SLR</title>
-    <link rel="icon" href="title.jpg" type="image/x-icon"> 
+    <link rel="icon" href="title.jpg" type="image/x-icon">
     <style>
         body {
             margin: 0;
@@ -122,10 +122,11 @@
             letter-spacing: 1px;
             transition: transform 0.3s;
         }
+
         .button:hover {
-            transform: scale(0.9) ;
+            transform: scale(0.9);
         }
-        
+
 
         @media only screen and (max-width: 600px) {
             .header {
@@ -181,15 +182,18 @@
         }
 
         .logo {
-            width: 200px; /* Adjust as needed */
+            width: 200px;
+            /* Adjust as needed */
             height: auto;
-            transition: transform 0.4s; /* Add transition for smooth animation */
+            transition: transform 0.4s;
+            /* Add transition for smooth animation */
         }
-        
+
         .logo:hover {
-            transform: scale(1.5); /* Zoom in effect on hover */
+            transform: scale(1.5);
+            /* Zoom in effect on hover */
         }
-        
+
         .brand-name {
             font-size: 36px;
             font-weight: bold;
@@ -235,13 +239,13 @@
             border-top: 4px solid #020ccf;
             width: 50px;
             height: 50px;
-            animation: spin 1s linear ;
+            animation: spin 1s linear;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 9999;
-            display:none;
+            display: none;
             margin-top: 240px;
             /* Initially hide the loading spinner */
         }
@@ -277,7 +281,7 @@
             </nav>
             <div class="main-text">
                 <span><b>SUBSCRIBE YT Channel - Crazy SLR</b></span>
-                <a class="button" onclick="showLoading('https://www.youtube.com/@CrazySLR')" >YouTube Channel</a>
+                <a class="button" onclick="showLoading('https://www.youtube.com/@CrazySLR')">YouTube Channel</a>
                 <a class="button" onclick="showLoading('rank.html')">Winners</a>
                 <div class="loading-spinner" id="loadingSpinner"></div>
             </div>
@@ -300,26 +304,28 @@
             nav.classList.toggle('active');
         }
     </script>
-        <!-- Your JavaScript -->
-        <script>
-            
-    function showLoading(x) {
-        // Show loading spinner
-        document.getElementById('loadingSpinner').style.display = 'block';
+    <!-- Your JavaScript -->
+    <script>
+        function showLoading(x) {
+            // Hide loading spinner if it's visible
+            document.getElementById('loadingSpinner').style.display = 'none';
 
-        // Simulate a delay to show loading animation
-        setTimeout(function() {
-            // Navigate to the next page
-            window.location.href = x;
-        }, 1000); // Change 2000 to the desired duration of your loading animation in milliseconds
-    }
+            // Show loading spinner
+            document.getElementById('loadingSpinner').style.display = 'block';
 
-    // Add event listener for page load
-    window.addEventListener('load', function() {
-        // Hide the loading spinner when the page is loaded
-        document.getElementById('loadingSpinner').style.display = 'none';
-    });
-        </script>
+            // Simulate a delay to show loading animation
+            setTimeout(function () {
+                // Navigate to the next page
+                window.location.href = x;
+            }, 1000); // Change 2000 to the desired duration of your loading animation in milliseconds
+        }
+
+        // Add event listener for page load
+        window.addEventListener('load', function () {
+            // Hide the loading spinner when the page is loaded
+            document.getElementById('loadingSpinner').style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>
